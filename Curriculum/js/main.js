@@ -229,9 +229,6 @@ document.querySelectorAll(".certificate-item").forEach((item) => {
     subcont3.classList.add("mfp-container", "mfp-s-ready", "mfp-iframe-holder");
     subcont4.classList.add("mfp-content");
     subcont5.classList.add("mfp-iframe-scaler");
-
-    IMG.src = 'img/clients/' + img;
-    IMG.alt = 'certifi';
     
 
     const html = `<button title="Cerrar (Esc)" type="button" class="mfp-close" id="closed">
@@ -251,8 +248,6 @@ document.querySelectorAll(".certificate-item").forEach((item) => {
 
     contenedor.appendChild(subcont1);
     contenedor.appendChild(subcont2);
-
-    document.querySelector(".image").appendChild(IMG);
 
     document.querySelector("#closed, .mfp-close, .mfp-container").addEventListener("click", function () {
       subcont1.remove();
