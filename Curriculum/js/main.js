@@ -1,4 +1,3 @@
-////////////Lo que debo aprender
 (function ($) {
   "use strict";
   function portfolio_init() {
@@ -15,7 +14,7 @@
       });
     }
   }
-  //////////Por ahora
+
   function mobileMenuHide() {
     var windowWidth = $(window).width(),
       siteHeader = $("#site_header");
@@ -230,22 +229,18 @@ document.querySelectorAll(".certificate-item").forEach((item) => {
     subcont3.classList.add("mfp-container", "mfp-s-ready", "mfp-iframe-holder");
     subcont4.classList.add("mfp-content");
     subcont5.classList.add("mfp-iframe-scaler");
-<<<<<<< HEAD
-=======
+
     IMG.src = 'img/clients/' + img;
     IMG.alt = 'certifi';
     
->>>>>>> c9bdc71de85853abaf54aa2c4b2bc7e0160bd071
 
     const html = `<button title="Cerrar (Esc)" type="button" class="mfp-close" id="closed">
                       <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">×</font></font>
                     </button>
                       
                     <div class="image" frameborder="0" >
-<<<<<<< HEAD
+
                       <img src='${img}' alt="certifi">
-=======
->>>>>>> c9bdc71de85853abaf54aa2c4b2bc7e0160bd071
                     </div>
                     `;
     subcont5.innerHTML = html;
