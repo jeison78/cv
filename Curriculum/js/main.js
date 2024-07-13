@@ -207,8 +207,8 @@
 
 document.querySelectorAll(".certificate-item").forEach((item) => {
   item.addEventListener("click", (e) => {
-    const img = (e.target.offsetParent.firstElementChild.childNodes[1].src).split('/')[5];
     
+    const img = document.querySelector('#certificado').src.split('/').slice(-3).toString().replace(/,/g, '/');
 
     const contenedor = document.body;
 
@@ -229,14 +229,13 @@ document.querySelectorAll(".certificate-item").forEach((item) => {
     subcont3.classList.add("mfp-container", "mfp-s-ready", "mfp-iframe-holder");
     subcont4.classList.add("mfp-content");
     subcont5.classList.add("mfp-iframe-scaler");
-    // subcont5.style.cssText = ''
 
     const html = `<button title="Cerrar (Esc)" type="button" class="mfp-close" id="closed">
                       <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">×</font></font>
                     </button>
                       
                     <div class="image" frameborder="0" >
-                      <img src='img/clients/${img}' alt="certifi">
+                      <img src='${img}' alt="certifi">
                     </div>
                     `;
     subcont5.innerHTML = html;
