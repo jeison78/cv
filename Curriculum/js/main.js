@@ -261,14 +261,12 @@ document.querySelectorAll(".certificate-item").forEach((item) => {
 
     contenedor.appendChild(subcont1);
     contenedor.appendChild(subcont2);
-
+                                                                                   
     document.querySelector("#closed, .mfp-close, .mfp-container").addEventListener("click", function () {
-
-    document.querySelector("#closed").addEventListener("click", function () {
       subcont1.remove();
       subcont2.remove();
     });
-
+    
     document.addEventListener("keydown", function (event) {
       if (event.key === "Escape") {
         subcont1.remove();
