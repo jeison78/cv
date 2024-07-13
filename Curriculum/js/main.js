@@ -244,20 +244,12 @@ document.querySelectorAll(".certificate-item").forEach((item) => {
     subcont3.classList.add("mfp-container", "mfp-s-ready", "mfp-iframe-holder");
     subcont4.classList.add("mfp-content");
     subcont5.classList.add("mfp-iframe-scaler");
-<<<<<<< Updated upstream
-    
-=======
->>>>>>> Stashed changes
 
     const html = `<button title="Cerrar (Esc)" type="button" class="mfp-close" id="closed">
                       <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">×</font></font>
                     </button>
                       
                     <div class="image" frameborder="0" >
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
                       <img src='${img}' alt="certifi">
                     </div>
                     `;
@@ -270,11 +262,9 @@ document.querySelectorAll(".certificate-item").forEach((item) => {
     contenedor.appendChild(subcont1);
     contenedor.appendChild(subcont2);
 
-<<<<<<< Updated upstream
     document.querySelector("#closed, .mfp-close, .mfp-container").addEventListener("click", function () {
-=======
+
     document.querySelector("#closed").addEventListener("click", function () {
->>>>>>> Stashed changes
       subcont1.remove();
       subcont2.remove();
     });
