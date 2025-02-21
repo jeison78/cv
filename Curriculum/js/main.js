@@ -207,25 +207,39 @@
 
 document.querySelectorAll(".certificate-item").forEach((item) => {
   item.addEventListener("click", (e) => {
-
-
     const x = e.target;
-    const y = document.querySelectorAll('#certificado');
+    const y = document.querySelectorAll("#certificado");
     let z = "";
 
-    if('div > div'){
-      const padre = e.target.closest('div[id]')
-      if(padre){
-        z = padre.id;
-      }
+    const padre = e.target.closest("div[id]");
+    if (padre) {
+      z = padre.id;
     }
 
-    const val_img = (x.id === "1" || z === "1")?y[0]:
-                    (x.id === "2" || z === "2")?y[1]:
-                    (x.id === "3" || z === "3")?y[2]:
-                    (x.id === "4" || z === "4")?y[3]: ''
+    const val_img =
+      x.id === "1" || z === "1"
+        ? y[0]
+        : x.id === "2" || z === "2"
+        ? y[1]
+        : x.id === "3" || z === "3"
+        ? y[2]
+        : x.id === "4" || z === "4"
+        ? y[3]
+        : x.id === "5" || z === "5"
+        ? y[4]
+        : x.id === "6" || z === "6"
+        ? y[5]
+        : x.id === "7" || z === "7"
+        ? y[6]
+        : x.id === "8" || z === "8"
+        ? y[7]
+        : x.id === "9" || z === "9"
+        ? y[8]
+        : x.id === "10" || z === "10"
+        ? y[9]
+        : "";
 
-    const img = val_img.src.split('/').slice(-3).toString().replace(/,/g, '/');
+    const img = val_img.src.split("/").slice(-3).toString().replace(/,/g, "/");
     const contenedor = document.body;
 
     const subcont1 = document.createElement("DIV");
@@ -263,10 +277,15 @@ document.querySelectorAll(".certificate-item").forEach((item) => {
     contenedor.appendChild(subcont1);
     contenedor.appendChild(subcont2);
 
-    document.querySelector("#closed, .mfp-close, .mfp-container").addEventListener("click", function () {
-      subcont1.remove();
-      subcont2.remove();
-    });
+    document
+      .querySelectorAll("#closed, .mfp-close, .mfp-container")
+      .forEach((g) => {
+        g.addEventListener("click", function () {
+          console.log("siiiiiiiiiii");
+          subcont1.remove();
+          subcont2.remove();
+        });
+      });
 
     document.addEventListener("keydown", function (event) {
       if (event.key === "Escape") {
@@ -277,15 +296,14 @@ document.querySelectorAll(".certificate-item").forEach((item) => {
   });
 });
 
-  
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'ArrowRight') {
+document.addEventListener("keydown", function (e) {
+  if (e.key === "ArrowRight") {
     const activeItem = $(".main-menu a.active").parent("li");
     activeItem.next("li").children("a").click();
     if (activeItem.is(":last-child")) {
       $(".main-menu li:first-child").children("a").click();
     }
-  } else if (e.key === 'ArrowLeft') {
+  } else if (e.key === "ArrowLeft") {
     const activeItem = $(".main-menu a.active").parent("li");
     activeItem.prev("li").children("a").click();
     if (activeItem.is(":first-child")) {
