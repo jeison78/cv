@@ -151,15 +151,16 @@
               class="btn btn-primary"
               onclick="(() => {
                 let win = window.open('pdf/cv-jeison.pdf', '_blank');
-                win && setTimeout(() => 
-                win.confirm('¿Quieres descargar el archivo?') , 3000)
-              })();
-
-                // window.open('pdf/cv-jeison.pdf', '_blank',) &&
-                // setTimeout(() => 
-                //   confirm('¿Quieres descargar el archivo?')
-                  
-                // ,300); return false"
+                win && setTimeout(() => {
+                if(win.confirm('¿Quieres descargar el archivo?')) {
+                  const link = document.createElement('A');
+                  link.href = 'pdf/cv-jeison.pdf';
+                  link.download = 'cv-jeison.pdf'
+                  link.click();
+                  document.body.removeChild(link);
+                }
+              }, 3000);
+              })();return false;"
               >Download CV</a
             >
           </div>
