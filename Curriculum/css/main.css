@@ -1220,7 +1220,7 @@ input[type="text"],
 }
 
 .timeline-second-style .left-part {
-  width: 30%;
+  width: 35%;
   display: table-cell;
   padding-right: 25px;
   min-height: 100%;
@@ -1281,7 +1281,7 @@ input[type="text"],
 
 .timeline-second-style .item-title {
   font-size: 16px;
-  margin-bottom: 3px;
+  margin-bottom: 15px;
 }
 
 .timeline-second-style .item-period {
@@ -1293,7 +1293,7 @@ input[type="text"],
 
 .timeline-second-style .item-company {
   display: block;
-  margin: 0 0 4px;
+  margin: 0 0 50px;
   font-size: 13px;
   font-weight: 300;
   line-height: 1.45em;
@@ -1302,6 +1302,7 @@ input[type="text"],
 
 .timeline-second-style .timeline-item:last-child .right-part {
   padding-bottom: 0;
+  
 }
 
 .timeline-second-style .item-logo {
@@ -1409,6 +1410,9 @@ input[type="text"],
 }
 .skills-second-style .skill-container.skill-12 .skill-percentage {
   width: 50%;
+}
+.skills-second-style .skill-container.skill-13 .skill-percentage {
+  width: 30%;
 }
 
 .pt-page .skills-second-style .skill-percentage,

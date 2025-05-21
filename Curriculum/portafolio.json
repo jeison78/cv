@@ -1,0 +1,257 @@
+[
+    {
+        "category_group": {
+            "0": "category_all",
+            "1": "category_React"
+        },
+        "img": "agenciaviajes.png",
+        "alt": "Imagen agencia viajes",
+        "title": "Agencia Viajes",
+        "href": "https://agenciaviajes-gfz1.onrender.com",
+        "category": "React con Node.js"
+    },
+    {
+        "category_group": {
+            "0": "category_all",
+            "1": "category_React"
+        },
+        "img": "1.png",
+        "alt": "Imagen seguimiento veterinaria",
+        "title": "Paciente Veterinaria",
+        "href": "https://660b563342bca64d41c500d3--loquacious-sunflower-e4b505.netlify.app/",
+        "category": "React con Node.js"
+    },
+    {
+        "category_group": {
+            "0": "category_all",
+            "1": "category_React"
+        },
+        "img": "2.png",
+        "alt": "Imagen cotizador prestamos",
+        "title": "Cotizador Prestamos",
+        "href": "https://cotizador-prestamos-react-pry01.netlify.app/",
+        "category": "React con Node.js"
+    },
+    {
+        "category_group": {
+            "0": "category_all",
+            "1": "category_JS"
+        },
+        "img": "3.png",
+        "alt": "Imagen carrito de compras",
+        "title": "Carrito de Compras",
+        "href": "https://jeison78.github.io/js/PROYECTO-Carrito",
+        "category": "JavaScript"
+    },
+    {
+        "category_group": {
+            "0": "category_all",
+            "1": "category_JS"
+        },
+        "img": "4.png",
+        "alt": "Imagen seguimiento veterinaria",
+        "title": "Administrar Citas",
+        "href": "https://jeison78.github.io/js/Proyecto_AdministrarCitas",
+        "category": "JavaScript"
+    },
+    {
+        "category_group": {
+            "0": "category_all",
+            "1": "category_JS"
+        },
+        "img": "5.png",
+        "alt": "Imagen buscador de autos",
+        "title": "Buscador de Autos",
+        "href": "https://jeison78.github.io/js/Proyecto_Buscador/",
+        "category": "JavaScript"
+    },
+    {
+        "category_group": {
+            "0": "category_all",
+            "1": "category_JS"
+        },
+        "img": "6.png",
+        "alt": "Imagen buscador de recetas",
+        "title": "Buscador de Recetas",
+        "href": "https://jeison78.github.io/js/Proyecto_BuscadorRecetas/",
+        "category": "JavaScript"
+    },
+    {
+        "category_group": {
+            "0": "category_all",
+            "1": "category_JS"
+        },
+        "img": "7.png",
+        "alt": "Imagen calculadora de consumos y propinas",
+        "title": "Cal. de Consumos y Propinas",
+        "href": "https://jeison78.github.io/js/Proyecto_CalcularPropinas",
+        "category": "JavaScript"
+    },
+    {
+        "category_group": {
+            "0": "category_all",
+            "1": "category_JS"
+        },
+        "img": "8.png",
+        "alt": "Imagen buscador de clima",
+        "title": "Buscador de Clima",
+        "href": "https://jeison78.github.io/js/Proyecto_Clima",
+        "category": "JavaScript"
+    },
+    {
+        "category_group": {
+            "0": "category_all",
+            "1": "category_JS"
+        },
+        "img": "9.png",
+        "alt": "Imagen cotizador de seguros",
+        "title": "Cotizador de Seguros",
+        "href": "https://jeison78.github.io/js/Proyecto_CotizadorSeguros",
+        "category": "JavaScript"
+    },
+    {
+        "category_group": {
+            "0": "category_all",
+            "1": "category_JS"
+        },
+        "img": "10.png",
+        "alt": "Imagen criptomonedas",
+        "title": "Criptomonedas",
+        "href": "https://jeison78.github.io/js/Proyecto_Criptomonedas",
+        "category": "JavaScript"
+    },
+    {
+        "category_group": {
+            "0": "category_all",
+            "1": "category_JS"
+        },
+        "img": "11.png",
+        "alt": "Imagen envio de emails",
+        "title": "Envio de Emails",
+        "href": "https://jeison78.github.io/js/Proyecto_EnviarEmail",
+        "category": "JavaScript"
+    },
+    {
+        "category_group": {
+            "0": "category_all",
+            "1": "category_JS"
+        },
+        "img": "12.png",
+        "alt": "Imagen localstorage",
+        "title": "LocalStorage",
+        "href": "https://jeison78.github.io/js/Proyecto_LocalStorage",
+        "category": "JavaScript"
+    },
+    {
+        "category_group": {
+            "0": "category_all",
+            "1": "category_JS"
+        },
+        "img": "13.png",
+        "alt": "Buscador de imagenes Pixabay",
+        "title": "Buscador de imagenes",
+        "href": "https://jeison78.github.io/js/Proyecto_LocalStorage",
+        "category": "JavaScript"
+    },
+    {
+        "category_group": {
+            "0": "category_all",
+            "1": "category_PHP",
+            "2": "category_Python",
+            "3": "category_C#"
+        },
+        "img": "cinestar.png",
+        "alt": "Imagen cinestar",
+        "title": "Cinestar",
+        "href": "",
+        "category": "PHP"
+    },
+    {
+        "category_group": {
+            "0": "category_all",
+            "1": "category_PHP"
+        },
+        "img": "login.png",
+        "alt": "Imagen formulario login",
+        "title": "Login",
+        "href": "",
+        "category": "PHP"
+    },
+    {
+        "category_group": {
+            "0": "category_all",
+            "1": "category_PHP"
+        },
+        "img": "Market.png",
+        "alt": "Imagen market",
+        "title": "Market",
+        "href": "",
+        "category": "PHP"
+    },
+    {
+        "category_group": {
+            "0": "category_all",
+            "1": "category_PHP"
+        },
+        "img": "Prendas.png",
+        "alt": "Imagen Prendas",
+        "title": "Prendas",
+        "href": "",
+        "category": "PHP"
+    },
+    {
+        "category_group": {
+            "0": "category_all",
+            "1": "category_PHP"
+        },
+        "img": "redsocial.png",
+        "alt": "Imagen Seguimiento Veterinaria",
+        "title": "Red Social",
+        "href": "",
+        "category": "PHP"
+    },
+    {
+        "category_group": {
+            "0": "category_all",
+            "1": "category_Wordpress"
+        },
+        "img": "regalandoarte.png",
+        "alt": "tienda de regalos",
+        "title": "Tienda de regalos",
+        "href": "",
+        "category": "WORDPRESS"
+    },
+    {
+        "category_group": {
+            "0": "category_all",
+            "1": "category_Wordpress"
+        },
+        "img": "artellAgendas.png",
+        "alt": "Tienda de agendas",
+        "title": "Tienda de agendas",
+        "href": "",
+        "category": "WORDPRESS"
+    },
+    {
+        "category_group": {
+            "0": "category_all",
+            "1": "category_React"
+        },
+        "img": "sistemGP.png",
+        "alt": "Sistema de Gestión y Control de Proyectos",
+        "title": "Sistema Gestor de Proyectos",
+        "href": "",
+        "category": "React"
+    },
+    {
+        "category_group": {
+            "0": "category_all",
+            "1": "category_PHP"
+        },
+        "img": "yasta.png",
+        "alt": "Restaurante Online",
+        "title": "Restaurante Online - Yasta!",
+        "href": "",
+        "category": "PHP"
+    }
+]
