@@ -205,42 +205,8 @@
   });
 })(jQuery);
 
-document.querySelectorAll(".certificate-item").forEach((item) => {
-  item.addEventListener("click", (e) => {
-    const x = e.target;
-    const y = document.querySelectorAll("#certificado");
-    let z = "";
-
-    const padre = e.target.closest("div[id]");
-    if (padre) {
-      z = padre.id;
-    }
-
-    const val_img =
-      x.id === "1" || z === "1"
-        ? y[0]
-        : x.id === "2" || z === "2"
-        ? y[1]
-        : x.id === "3" || z === "3"
-        ? y[2]
-        : x.id === "4" || z === "4"
-        ? y[3]
-        : x.id === "5" || z === "5"
-        ? y[4]
-        : x.id === "6" || z === "6"
-        ? y[5]
-        : x.id === "7" || z === "7"
-        ? y[6]
-        : x.id === "8" || z === "8"
-        ? y[7]
-        : x.id === "9" || z === "9"
-        ? y[8]
-        : x.id === "10" || z === "10"
-        ? y[9]
-        : "";
-
-    const img = val_img.src.split("/").slice(-3).toString().replace(/,/g, "/");
-    const contenedor = document.body;
+document.getElementById('certif-lab').addEventListener('click', function() {
+  const contenedor = document.body;
 
     const subcont1 = document.createElement("DIV");
     const subcont2 = document.createElement("DIV");
@@ -265,7 +231,7 @@ document.querySelectorAll(".certificate-item").forEach((item) => {
                     </button>
                       
                     <div class="image" frameborder="0" >
-                      <img src='${img}' alt="certifi">
+                      <iframe src="pdf/certificado_laboral.pdf" style="width: 50%, height: 350px;" frameborder="0"></iframe>
                     </div>
                     `;
     subcont5.innerHTML = html;
@@ -281,7 +247,108 @@ document.querySelectorAll(".certificate-item").forEach((item) => {
       .querySelectorAll("#closed, .mfp-close, .mfp-container")
       .forEach((g) => {
         g.addEventListener("click", function () {
-          console.log("siiiiiiiiiii");
+          subcont1.remove();
+          subcont2.remove();
+        });
+      });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        subcont1.remove();
+        subcont2.remove();
+      }
+    });
+})
+
+document.querySelectorAll(".certificate-item" || 'certif-lab').forEach((item) => {
+  item.addEventListener("click", (e) => {
+    const x = e.target;
+    const y = document.querySelectorAll("#certificado");
+    console.log(y);
+    let z = "";
+
+    const padre = e.target.closest("div[id]");
+    if (padre) {
+      z = padre.id;
+    }
+
+    const val_img = 
+      x.id === "0" || z === "0"
+        ? y[0]
+        : x.id === "1" || z === "1"
+        ? y[1]
+        : x.id === "2" || z === "2"
+        ? y[2]
+        : x.id === "3" || z === "3"
+        ? y[3]
+        : x.id === "4" || z === "4"
+        ? y[4]
+        : x.id === "5" || z === "5"
+        ? y[5]
+        : x.id === "6" || z === "6"
+        ? y[6]
+        : x.id === "7" || z === "7"
+        ? y[7]
+        : x.id === "8" || z === "8"
+        ? y[8]
+        : x.id === "9" || z === "9"
+        ? y[9]
+        : x.id === "10" || z === "10"
+        ? y[10]
+        : x.id === "11" || z === "11"
+        ? y[11]
+        : "";
+
+        const img1 = val_img.src;
+    console.log(img1);
+    const contenedor = document.body;
+
+    const subcont1 = document.createElement("DIV");
+    const subcont2 = document.createElement("DIV");
+    const subcont3 = document.createElement("DIV");
+    const subcont4 = document.createElement("DIV");
+    const subcont5 = document.createElement("DIV");
+
+    subcont1.classList.add("mfp-bg", "mfp-fade", "mfp-ready");
+    subcont2.classList.add(
+      "mfp-wrap",
+      "mfp-close-btn-in",
+      "mfp-auto-cursor",
+      "mfp-fade",
+      "mfp-ready"
+    );
+    subcont3.classList.add("mfp-container", "mfp-s-ready", "mfp-iframe-holder");
+    subcont4.classList.add("mfp-content");
+    subcont5.classList.add("mfp-iframe-scaler");
+
+    let contenido = `<img src='${img1}' alt="certifi"></img>`;
+
+
+    if(img1.split("/").slice(6,7).toString() === "certifi-laboral.png") {
+      contenido = `<iframe src="pdf/certificado_laboral.pdf" style="width: 50%, height: 350px;" frameborder="0"></iframe>`;
+    };
+
+    const html = `<button title="Cerrar (Esc)" type="button" class="mfp-close" id="closed">
+                      <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">×</font></font>
+                    </button>
+                      
+                    <div class="image" frameborder="0" >
+                      ${contenido}
+                    </div>
+                    `;
+    subcont5.innerHTML = html;
+
+    subcont4.appendChild(subcont5);
+    subcont3.appendChild(subcont4);
+    subcont2.appendChild(subcont3);
+
+    contenedor.appendChild(subcont1);
+    contenedor.appendChild(subcont2);
+
+    document
+      .querySelectorAll("#closed, .mfp-close, .mfp-container")
+      .forEach((g) => {
+        g.addEventListener("click", function () {
           subcont1.remove();
           subcont2.remove();
         });
