@@ -205,163 +205,90 @@
   });
 })(jQuery);
 
-document.getElementById('certif-lab').addEventListener('click', function() {
+function ViewModal(img) {
   const contenedor = document.body;
 
-    const subcont1 = document.createElement("DIV");
-    const subcont2 = document.createElement("DIV");
-    const subcont3 = document.createElement("DIV");
-    const subcont4 = document.createElement("DIV");
-    const subcont5 = document.createElement("DIV");
+  const subcont1 = document.createElement("DIV");
+  const subcont2 = document.createElement("DIV");
+  const subcont3 = document.createElement("DIV");
+  const subcont4 = document.createElement("DIV");
+  const subcont5 = document.createElement("DIV");
 
-    subcont1.classList.add("mfp-bg", "mfp-fade", "mfp-ready");
-    subcont2.classList.add(
-      "mfp-wrap",
-      "mfp-close-btn-in",
-      "mfp-auto-cursor",
-      "mfp-fade",
-      "mfp-ready"
-    );
-    subcont3.classList.add("mfp-container", "mfp-s-ready", "mfp-iframe-holder");
-    subcont4.classList.add("mfp-content");
-    subcont5.classList.add("mfp-iframe-scaler");
+  subcont1.classList.add("mfp-bg", "mfp-fade", "mfp-ready");
+  subcont2.classList.add(
+    "mfp-wrap",
+    "mfp-close-btn-in",
+    "mfp-auto-cursor",
+    "mfp-fade",
+    "mfp-ready"
+  );
+  subcont3.classList.add("mfp-container", "mfp-s-ready", "mfp-iframe-holder");
+  subcont4.classList.add("mfp-content");
+  subcont5.classList.add("mfp-iframe-scaler");
 
-    const html = `<button title="Cerrar (Esc)" type="button" class="mfp-close" id="closed">
+  let contenido = `<img src='${img.src}' alt="certifi"></img>`;
+
+  if(img.id == "certifi-laboral") {
+    console.log(img.id);
+    contenido = `<iframe src="pdf/certificado_laboral.pdf" style="width: 50%, height: 350px;" frameborder="0"></iframe>`;
+    
+  };
+
+  const html = `<button title="Cerrar (Esc)" type="button" class="mfp-close" id="closed">
                       <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">×</font></font>
                     </button>
-                      
+
                     <div class="image" frameborder="0" >
-                      <iframe src="pdf/certificado_laboral.pdf" style="width: 50%, height: 350px;" frameborder="0"></iframe>
+                    ${contenido}
                     </div>
                     `;
-    subcont5.innerHTML = html;
+  subcont5.innerHTML = html;
 
-    subcont4.appendChild(subcont5);
-    subcont3.appendChild(subcont4);
-    subcont2.appendChild(subcont3);
+  subcont4.appendChild(subcont5);
+  subcont3.appendChild(subcont4);
+  subcont2.appendChild(subcont3);
 
-    contenedor.appendChild(subcont1);
-    contenedor.appendChild(subcont2);
+  contenedor.appendChild(subcont1);
+  contenedor.appendChild(subcont2);
 
-    document
-      .querySelectorAll("#closed, .mfp-close, .mfp-container")
-      .forEach((g) => {
-        g.addEventListener("click", function () {
-          subcont1.remove();
-          subcont2.remove();
-        });
-      });
-
-    document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape") {
+  document
+    .querySelectorAll("#closed, .mfp-close, .mfp-container")
+    .forEach((g) => {
+      g.addEventListener("click", function () {
         subcont1.remove();
         subcont2.remove();
-      }
+      });
     });
-})
 
-document.querySelectorAll(".certificate-item" || 'certif-lab').forEach((item) => {
-  item.addEventListener("click", (e) => {
-    const x = e.target;
-    const y = document.querySelectorAll("#certificado");
-    console.log(y);
-    let z = "";
-
-    const padre = e.target.closest("div[id]");
-    if (padre) {
-      z = padre.id;
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      subcont1.remove();
+      subcont2.remove();
     }
-
-    const val_img = 
-      x.id === "0" || z === "0"
-        ? y[0]
-        : x.id === "1" || z === "1"
-        ? y[1]
-        : x.id === "2" || z === "2"
-        ? y[2]
-        : x.id === "3" || z === "3"
-        ? y[3]
-        : x.id === "4" || z === "4"
-        ? y[4]
-        : x.id === "5" || z === "5"
-        ? y[5]
-        : x.id === "6" || z === "6"
-        ? y[6]
-        : x.id === "7" || z === "7"
-        ? y[7]
-        : x.id === "8" || z === "8"
-        ? y[8]
-        : x.id === "9" || z === "9"
-        ? y[9]
-        : x.id === "10" || z === "10"
-        ? y[10]
-        : x.id === "11" || z === "11"
-        ? y[11]
-        : "";
-
-        const img1 = val_img.src;
-    console.log(img1);
-    const contenedor = document.body;
-
-    const subcont1 = document.createElement("DIV");
-    const subcont2 = document.createElement("DIV");
-    const subcont3 = document.createElement("DIV");
-    const subcont4 = document.createElement("DIV");
-    const subcont5 = document.createElement("DIV");
-
-    subcont1.classList.add("mfp-bg", "mfp-fade", "mfp-ready");
-    subcont2.classList.add(
-      "mfp-wrap",
-      "mfp-close-btn-in",
-      "mfp-auto-cursor",
-      "mfp-fade",
-      "mfp-ready"
-    );
-    subcont3.classList.add("mfp-container", "mfp-s-ready", "mfp-iframe-holder");
-    subcont4.classList.add("mfp-content");
-    subcont5.classList.add("mfp-iframe-scaler");
-
-    let contenido = `<img src='${img1}' alt="certifi"></img>`;
-
-
-    if(img1.split("/").slice(6,7).toString() === "certifi-laboral.png") {
-      contenido = `<iframe src="pdf/certificado_laboral.pdf" style="width: 50%, height: 350px;" frameborder="0"></iframe>`;
-    };
-
-    const html = `<button title="Cerrar (Esc)" type="button" class="mfp-close" id="closed">
-                      <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">×</font></font>
-                    </button>
-                      
-                    <div class="image" frameborder="0" >
-                      ${contenido}
-                    </div>
-                    `;
-    subcont5.innerHTML = html;
-
-    subcont4.appendChild(subcont5);
-    subcont3.appendChild(subcont4);
-    subcont2.appendChild(subcont3);
-
-    contenedor.appendChild(subcont1);
-    contenedor.appendChild(subcont2);
-
-    document
-      .querySelectorAll("#closed, .mfp-close, .mfp-container")
-      .forEach((g) => {
-        g.addEventListener("click", function () {
-          subcont1.remove();
-          subcont2.remove();
-        });
-      });
-
-    document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape") {
-        subcont1.remove();
-        subcont2.remove();
-      }
-    });
   });
+}
+
+
+document.querySelectorAll(".certificate-item").forEach((ci) => {
+  ci.addEventListener("click", (e) => {
+    e.preventDefault();
+    const img = ci.querySelector('.certi-logo img')
+    
+    if(img.id == 'certifi-laboral') {
+      // const imgSrc = img.src.split('/').slice(6,7).toString();
+      
+      ViewModal(img);
+    }else {
+      ViewModal(img);
+    }
+    
+  })
 });
+
+$('#certifi-laboral').on('click', function () {
+  const img = {"id": 'certifi-laboral'};
+  ViewModal(img)
+})
 
 document.addEventListener("keydown", function (e) {
   if (e.key === "ArrowRight") {
@@ -378,3 +305,41 @@ document.addEventListener("keydown", function (e) {
     }
   }
 });
+
+
+
+// const y = document.querySelectorAll("#certificado");
+//     console.log(y);
+//     let z = "";
+
+//     const padre = e.target.closest("div[id]");
+//     if (padre) {
+//       z = padre.id;
+//     }
+
+//     const val_img =
+//       x.id === "0" || z === "0"
+//         ? y[0]
+//         : x.id === "1" || z === "1"
+//         ? y[1]
+//         : x.id === "2" || z === "2"
+//         ? y[2]
+//         : x.id === "3" || z === "3"
+//         ? y[3]
+//         : x.id === "4" || z === "4"
+//         ? y[4]
+//         : x.id === "5" || z === "5"
+//         ? y[5]
+//         : x.id === "6" || z === "6"
+//         ? y[6]
+//         : x.id === "7" || z === "7"
+//         ? y[7]
+//         : x.id === "8" || z === "8"
+//         ? y[8]
+//         : x.id === "9" || z === "9"
+//         ? y[9]
+//         : x.id === "10" || z === "10"
+//         ? y[10]
+//         : x.id === "11" || z === "11"
+//         ? y[11]
+//         : "";
